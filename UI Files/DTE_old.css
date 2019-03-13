@@ -1,0 +1,16 @@
+.home {
+	background-image: url('C:/Users/Sakshi/Desktop/DTE/preview-75762-mWCVVwqEKJ_0000.jpg');
+    background-repeat: no-repeat;
+    background-size: 1920px 768px;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    transform: translateX(-50%) translateY(-15%);
+    }
+
+.my-img {
+    width: 10%;
+    height: 10%;
+    }

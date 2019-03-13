@@ -1,0 +1,116 @@
+CREATE TABLE admin_master
+(
+  adminID INT NOT NULL AUTO_INCREMENT,
+  adminName VARCHAR(50) NOT NULL,
+  username VARCHAR(16) NOT NULL,
+  password VARCHAR(256) NOT NULL,
+  mailID VARCHAR(100) NOT NULL,
+  PRIMARY KEY (adminID),
+  UNIQUE (username),
+  UNIQUE (mailID)
+);
+
+CREATE TABLE form17_1
+(
+  ID17_1 INT NOT NULL AUTO_INCREMENT,
+  writNo VARCHAR(25) NOT NULL,
+  writYear DATE NOT NULL,
+  partyName VARCHAR(50) NOT NULL,
+  partySection VARCHAR(25) NOT NULL,
+  judgementDate DATE NOT NULL,
+  judgementDescr VARCHAR(200) NOT NULL,
+  appealableDTE VARCHAR(2) NOT NULL,
+  opinionDTE VARCHAR(200) NOT NULL,
+  appealableAGP VARCHAR(2) NOT NULL,
+  opinionAGP VARCHAR(200) NOT NULL,
+  appealDateED DATE NOT NULL,
+  judgementLastDate DATE NOT NULL,
+  corED VARCHAR(500),
+  remarks17_1 VARCHAR(500),
+  enteredOn DATE NOT NULL,
+  enteredBy INT NOT NULL,
+  PRIMARY KEY (ID17_1),
+  FOREIGN KEY (enteredBy) REFERENCES admin_master(adminID),
+  UNIQUE (writNo)
+);
+
+CREATE TABLE form17_2_1
+(
+  ID17_2_1 INT NOT NULL AUTO_INCREMENT,
+  writNo VARCHAR(25) NOT NULL,
+  writYear DATE NOT NULL,
+  respondentName VARCHAR(50) NOT NULL,
+  caseStage VARCHAR(100) NOT NULL,
+  writSubject VARCHAR(200) NOT NULL,
+  PRDate DATE NOT NULL,
+  affidavitDate DATE NOT NULL,
+  IRGiven VARCHAR(2) NOT NULL,
+  remarks17_2_1 VARCHAR(200),
+  enteredOn DATE NOT NULL,
+  enteredBy INT NOT NULL,
+  PRIMARY KEY (ID17_2_1),
+  FOREIGN KEY (enteredBy) REFERENCES admin_master(adminID),
+  UNIQUE (writNo)
+);
+
+CREATE TABLE form17_2_2
+(
+  ID17_2_2 INT NOT NULL AUTO_INCREMENT,
+  writNo VARCHAR(25) NOT NULL,
+  writYear DATE NOT NULL,
+  partyName VARCHAR(50) NOT NULL,
+  partySection VARCHAR(25) NOT NULL,
+  caseStage VARCHAR(100) NOT NULL,
+  writSubject VARCHAR(200) NOT NULL,
+  PRDate DATE NOT NULL,
+  affidavitDate DATE NOT NULL,
+  IRGiven VARCHAR(2) NOT NULL,
+  remarks17_2_2 VARCHAR(200),
+  AGappeared VARCHAR(50),
+  mapped VARCHAR(2),
+  enteredOn DATE NOT NULL,
+  enteredBy INT NOT NULL,
+  PRIMARY KEY (ID17_2_2),
+  FOREIGN KEY (enteredBy) REFERENCES admin_master(adminID),
+  UNIQUE (writNo)
+);
+
+CREATE TABLE form17_2_3
+(
+  ID17_2_3 INT NOT NULL AUTO_INCREMENT,
+  writNo VARCHAR(25) NOT NULL,
+  writYear DATE NOT NULL,
+  partyName VARCHAR(50) NOT NULL,
+  partySection VARCHAR(25) NOT NULL,
+  caseStage VARCHAR(100) NOT NULL,
+  writSubject VARCHAR(200) NOT NULL,
+  PRDate DATE NOT NULL,
+  affidavitDate DATE NOT NULL,
+  IRGiven VARCHAR(2) NOT NULL,
+  remarks17_2_3 VARCHAR(200),
+  enteredOn DATE NOT NULL,
+  enteredBy INT NOT NULL,
+  PRIMARY KEY (ID17_2_3),
+  FOREIGN KEY (enteredBy) REFERENCES admin_master(adminID),
+  UNIQUE (writNo)
+);
+
+CREATE TABLE form17_3
+(
+  ID17_3 INT NOT NULL  AUTO_INCREMENT,
+  writNo VARCHAR(25) NOT NULL,
+  writYear DATE NOT NULL,
+  partyName VARCHAR(50) NOT NULL,
+  partySection VARCHAR(25) NOT NULL,
+  writSubject VARCHAR(200) NOT NULL,
+  orderDate DATE NOT NULL,
+  orderByHC VARCHAR(25) NOT NULL,
+  actionDoneOnOrder VARCHAR(200) NOT NULL,
+  remarks17_3 VARCHAR(200),
+  enteredOn DATE NOT NULL,
+  enteredBy INT NOT NULL,
+  PRIMARY KEY (ID17_3),
+  FOREIGN KEY (enteredBy) REFERENCES admin_master(adminID),
+  UNIQUE (writNo)
+);
+ 

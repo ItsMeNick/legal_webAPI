@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DTE</title>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scalable=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="DTE.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/javascript" href="passtest.js">
+  <link rel="stylesheet" type="text/css" href="nav-style.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+    .body {
+      height: 100%;
+      margin: 0;
+      font: 400 10px/1.8 "Lato", sans-serif;
+      margin-bottom: 60px; /* Margin bottom by footer height */
+      color: #777;
+    }
+  </script>
+</head>
+<body>
+  <!-- As a heading -->
+  <div class="container-fluid" style="padding-left: 0px; padding-right: 0px;">
+      <div class="row" style="margin-left: 5px;">
+<!-- 
+<div class="col-sm"> 
+-->
+<img src="logo.png" class="img-responsive my-img mt-3 mr-3 ml-3 mb-3" style="height: 60px; width: 60px; margin-left: 15px;">
+<!-- <div class="col-sm"> -->
+    <span class="navbar-brand h1 mt-4">DIRECTORATE OF TECHNICAL EDUCATION, GUJARAT</span>
+<!-- div>
+</div>-->
+</div> 
+<div class="navigation">
+  <div class="dropdown">   <!-- navigation STARTS here -->
+  <label for="show-menu" class="show-menu" style="margin-bottom: 0px">Show Menu</label>
+  <input type="checkbox" id="show-menu" role="button">
+  <ul id="menu">
+    <li><a href="adminhome.html" class="active main-link">HOME</a></li>
+    <li><a href="#" class="main-link">CASE REPORTS &nbsp;<i class="fa fa-caret-down"></i></a>
+      <ul class="hidden">
+        <li><a href="#">BASED ON STATUS</a></li>
+        <li><a href="#">COURT WISE</a></li>
+        <li><a href="#">PETITION YEAR</a></li>
+        <li><a href="#">DEPARTMENT OF EDUCATION</a></li>
+        <li><a href="#">DURATION WISE</a></li>
+        <li><a href="#">BASED ON THE CAUSE</a></li>
+      </ul>
+    </li>
+    <li><a href="#" class="main-link">MANAGE CASE &nbsp;<i class="fa fa-caret-down"></i></a>
+      <ul class="hidden">
+        <li><a href="#">ADD A NEW CASE</a></li>
+        <li><a href="#">UPDATE CASE</a></li>
+        <li><a href="#">DELETE CASE</a></li>
+      </ul>
+    </li>
+    <li><a href="#" class="main-link">MANAGE USERS &nbsp;<i class="fa fa-caret-down"></i></a>
+      <ul class="hidden">
+        <li><a href="addadmin.html">ADD USER</a></li>
+        <li><a href="#">DELETE USER</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</div>              <!-- navigation ENDS here -->
+
+</div>
+<br>
+<br>
+<br>
+<center>
+<div class="container" >
+
+  <div class="row col-sm-12"> 
+    <br>
+        <div class="col-sm-4"  style="margin-bottom: 45px;">
+
+          <span style="font-size: 20px;padding-left: 0px"><b>Admin</b></span>
+          <div <div class="boxed" style="border: 1px; border-style: double; height: 100px; width: 100px;">
+            <h1><!--?php echo $admin; ?--></h1>
+          </div>
+            <h1><?php echo $admin; ?></h1>
+          </div>
+        
+
+        <div class="col-sm-4"  style="margin-bottom: 45px;" style="padding-left: 0px">
+
+      <span style="font-size: 20px;padding-left: 0px"><b>Department</b></span>
+         <div class="boxed" style="border: 1px; border-style: double; height: 100px; width: 100px;">
+            <h1><!--?php echo $admin; ?--></h1>
+          </div>
+        <h1><?php echo $dept; ?></h1>
+        </div>  
+
+
+        <div class="col-sm-4"  style="margin-bottom: 45px;">  
+
+        <span style="font-size: 20px"><b>Staff</b></span>
+        <div class="boxed" style="border: 1px; border-style: double; height: 100px; width: 100px;">
+            <h1><!--?php echo $admin; ?--></h1>
+          </div>
+        <h1><?php echo $clerk; ?></h1>
+        </div> 
+        </div>
+    
+    <div class="row col-sm-12"> 
+
+        <div class="col-sm-4"  style="margin-bottom: 45px;">
+
+        <span style="font-size: 20px;padding-left: 0px"><b>Students</b></span>
+        <div class="boxed" style="border: 1px; border-style: double; height: 100px; width: 100px;">
+            <h1><!--?php echo $admin; ?--></h1>
+          </div>
+        <h1><?php echo $Student; ?></h1>
+        </div>
+        
+       <div class="col-sm-4"  style="margin-bottom: 45px;">  
+
+        <span style="font-size: 20px"><b>Active Fees</b></span>
+        <div class="boxed" style="border: 1px; border-style: double; height: 100px; width: 100px;">
+            <h1><!--?php echo $admin; ?--></h1>
+          </div>
+        <h1><?php echo $active; ?></h1>
+        </div> 
+        
+
+
+        <div class="col-sm-4"  style="margin-bottom: 45px;" style="padding-left: 0px">
+        <!-- <i class="fa fa-certificate fa-2x" aria-hidden="true" style="padding-left: 0x;"></i> -->
+
+          <span style="font-size: 20px;padding-left: 0px"><b>Pending Application(s)</b></span>
+        <div class="boxed" style="border: 1px; border-style: double; height: 100px; width: 100px;">
+            <h1><!--?php echo $admin; ?--></h1>
+          </div>
+        <h1><?php echo $Certificate; ?></h1>
+        </div>  
+        </div>
+
+
+    <div class="row col-sm-12"> 
+        <div class="col-sm-4"  style="margin-bottom: 45px;">
+
+          <span style="font-size: 20px;padding-left: 0px"><b>Grievance Coordinator</b></span>
+          <div class="boxed" style="border: 1px; border-style: double; height: 100px; width: 100px;">
+            <h1><!--?php echo $admin; ?--></h1>
+          </div>
+            <h1><?php echo $GriCoNo; ?></h1>
+          </div>
+        
+
+        <div class="col-sm-4"  style="margin-bottom: 45px;">
+
+          <span style="font-size: 20px;padding-left: 0px"><b>Submitted Grievance</b></span>
+          <div class="boxed" style="border: 1px; border-style: double; height: 100px; width: 100px;">
+            <h1><!--?php echo $admin; ?--></h1>
+          </div>
+            <h1><?php echo $ToBeAddressed; ?></h1>
+          </div>
+        
+
+        <div class="col-sm-4"  style="margin-bottom: 45px;" style="padding-left: 0px">
+
+      <span style="font-size: 20px;padding-left: 0px"><b>Responded Grievance</b></span>
+        <div class="boxed" style="border: 1px; border-style: double; height: 100px; width: 100px;">
+            <h1><!--?php echo $admin; ?--></h1>
+          </div>
+        <h1><?php echo $Replied; ?></h1>
+        </div>  
+          </div>
+      
+
+    </div>
+</div>
+</center>
+  
+  </body>
+  </html>
